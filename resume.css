@@ -1,0 +1,59 @@
+/*Note: My older sister, Phoebe Lee, helped me with the CSS table display*/
+
+div.tableRow {display: table-row;}
+.column-1, .column-2 {display: table-cell;}
+.column-1 {width: 150px;}
+
+#top {
+	text-align: center;
+	color: #16a6b6; /*turquoise*/
+	font-family: "Covered By Your Grace", "Marck Script", "Droid Sans", sans-serif;
+	margin-top: 125px;
+	margin-bottom: 20px;
+	font-size: 500%;
+	font-weight: normal;
+}
+
+p a {color: #16a6b6;}
+p a:hover {color: #ee6557; } /*salmon*/
+p a:visited  {color: #ccc;}
+
+#pdf {
+	text-align: center;
+	font-size: 95%;
+	margin-bottom: 0px;
+}
+
+
+div.header{
+	display: table-caption;
+	color: #16a6b6;
+	border-bottom: 3px solid #16a6b6;
+}
+
+.title {
+	color: #16a6b6; 
+	font-size: 120%;
+}
+
+.em {
+	font-style: oblique;
+	font-size: 85%;
+}
+
+div.tableContainer {
+	display: table;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body {
+	font-family: "Droid Sans", sans-serif;
+	background-color: #fafafa;
+}
+
+#resume {
+	line-height: 140%;
+	margin-bottom: 50px;
+}

@@ -1,0 +1,36 @@
+.container {
+	margin-top: 5%;
+	margin-bottom: 2%;
+	font-family: "Droid Sans", sans-serif;
+}
+
+body {background-color: #fafafa !important;}
+
+#top {
+	color: #16a6b6;
+	font-family: "Covered By Your Grace", "Marck Script", "Droid Sans", sans-serif !important;
+	font-size: 500%;
+	font-style: bold;
+	text-align: center;
+}
+
+h3 {
+	color: #16a6b6 !important;
+	margin-top: 0px !important;
+}
+
+.project {
+	border-top: 3px solid #16a6b6;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.btn-danger {
+	background-color: #ee6557 !important;
+	border-color: #ee6557 !important;
+}
+
+.btn-danger:hover {
+	background-color: #be5045 !important;
+	border-color: #be5045 !important;
+}

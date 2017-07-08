@@ -1,0 +1,25 @@
+.container {
+	margin-top: 10%;
+	font-family: "Droid Sans", sans-serif;
+	margin-bottom: 5%;
+}
+
+body {background-color: #fafafa !important;}
+
+#top {
+	color: #16a6b6;
+	font-family: "Covered By Your Grace", "Marck Script", "Droid Sans", sans-serif !important;
+	font-size: 500%;
+	font-style: bold;
+	text-align: center;
+}
+
+#contactinfo {
+	list-style-type: none;
+	width: 700px !important;
+	margin: 0px auto;
+	font-size: 125%;
+	line-height: 1.75;
+	color: #555;
+	margin-top: 3%;
+}

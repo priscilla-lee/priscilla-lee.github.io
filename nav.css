@@ -1,0 +1,39 @@
+nav ul {
+	background-color: #16a6b6;
+	box-shadow: 0 4px 2px -2px gray;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	list-style-type: none;
+	text-decoration: none !important;
+	font-family: "Droid Sans", calibri, sans-serif;
+	font-size: 16px;
+	font-style: bold;
+	margin: 0px;
+	padding: 15px 0px 15px 0px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 100;
+}
+
+nav .home {
+	border-bottom-left-radius: 15px;
+}
+
+nav ul li {
+	display: inline;
+	padding: 15px 20px 15px 20px;
+}
+
+nav ul li:hover, nav ul li a:hover {
+	background-color: #1DCADA;
+	color: white !important;
+	text-decoration: none !important;
+}
+
+nav ul li a {
+	color: white !important;
+	text-decoration: none !important;
+}
+

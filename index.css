@@ -1,0 +1,166 @@
+body {
+	background-color: #fafafa;
+	background-image: url(images/geometry_background.png);
+}
+
+#container {
+	width: 925px;
+	height: 500px;
+	display: none;
+	margin: 5% auto;
+}
+
+.hex {
+	width: 175px;
+	height: 101px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;			
+	-webkit-background-size: auto 173px;							
+	-moz-background-size: auto 173px;							
+	-ms-background-size: auto 173px;							
+	-o-background-size: auto 173px;							
+	position: relative;
+	float:left;
+	margin:30px 5px;
+	text-align:center;
+	zoom:1;
+	z-index: 10;
+	display: none;
+}
+
+.link {
+	background-color: #16a6b6;
+	color: white;
+	font-family: 'Amatic SC', calibri, sans-serif;
+	font-size: 200%;
+	font-style: bold;
+}
+
+.link:hover {
+	background-color: #1DCADA; 
+	line-height: 72%;
+	font-size: 250%;
+}
+
+#pic1:hover { background-image: url(images/color1.jpg); }
+#pic2:hover { background-image: url(images/color2.jpg); }
+#pic3:hover { background-image: url(images/color3.jpg); }
+#pic4:hover { background-image: url(images/color4.jpg); }
+
+#pic1:hover>.part1 { background-image: url(images/color1.jpg); }
+#pic2:hover>.part1 { background-image: url(images/color2.jpg); }
+#pic3:hover>.part1 { background-image: url(images/color3.jpg); }
+#pic4:hover>.part1 { background-image: url(images/color4.jpg); }
+
+#pic1:hover>.part2 { background-image: url(images/color1.jpg); }
+#pic2:hover>.part2 { background-image: url(images/color2.jpg); }
+#pic3:hover>.part2 { background-image: url(images/color3.jpg); }
+#pic4:hover>.part2 { background-image: url(images/color4.jpg); }
+
+#pic1:hover, #pic2:hover, #pic3:hover, #pic4:hover, #pic1, #pic2, #pic3, #pic4 {
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+#pic1, #pic2, #pic3, #pic4 {display: none;}
+
+#pic1 {background-image: url(images/bw1.jpg);}
+#pic2 {background-image: url(images/bw2.jpg);}
+#pic3 {background-image: url(images/bw3.jpg);}
+#pic4 {background-image: url(images/bw4.jpg);}
+
+.salmon {background-color: #ee6557;}
+.gray {background-color: #ccc;}
+
+.salmon:hover {background-color: #FF6C5D;}
+.gray:hover {background-color: #ddd;}
+		
+.hexRow:nth-child(odd){
+	margin-left: 95px;
+}
+
+.hex a {
+	display:block;
+	width: 100%;
+	height:100%;
+	text-indent:-9999em;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.part1, .part2 {
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: inherit;								
+	z-index:-2;						
+	overflow:hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;			
+	backface-visibility: hidden;			
+}
+
+.part1 {
+	z-index:-1;
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	-ms-transform: rotate(60deg);
+	-o-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
+
+.part2 {
+	-webkit-transform: rotate(-60deg);
+	-moz-transform: rotate(-60deg);
+	-ms-transform: rotate(-60deg);
+	-o-transform: rotate(-60deg);
+	transform: rotate(-60deg);
+}
+
+.part1:before, .part2:before {
+	width: 173px;
+	height:	173px;
+	content: '';
+	position: absolute;
+	background: inherit;
+	top:0;
+	left: 0;
+	z-index: 1;
+	background: inherit;
+	background-repeat:no-repeat;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;	
+	backface-visibility: hidden;				  
+}			
+
+
+.part1:before {
+	-webkit-transform: rotate(-60deg) translate(-87px, 15px);
+	-moz-transform: rotate(-60deg) translate(-87px, 15px);
+	-ms-transform: rotate(-60deg) translate(-87px, 15px);
+	-o-transform: rotate(-60deg) translate(-87px, 15px);
+	transform: rotate(-60deg) translate(-87px, 15px);
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	-ms-transform-origin: 0 0;
+	-o-transform-origin: 0 0;
+	transform-origin: 0 0;
+}			
+
+.part2:before {
+	-webkit-transform: rotate(60deg) translate(-31px, -18px);
+	-moz-transform: rotate(60deg) translate(-31px, -18px);
+	-ms-transform: rotate(60deg) translate(-31px, -18px);
+	-o-transform: rotate(60deg) translate(-31px, -18px);
+	transform: rotate(60deg) translate(-31px, -18px)
+	bottom:0;
+}		

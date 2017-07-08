@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About | Priscilla Lee</title>
+    <meta charset="utf-8">
+	<link href="about.css" rel="stylesheet">
+	<link href="nav.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:100,400' rel='stylesheet' type='text/css'>	
+	<link href='http://fonts.googleapis.com/css?family=PT+Mono:100,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Marck+Script:100,400' rel='stylesheet' type='text/css'>	
+	<link href='http://fonts.googleapis.com/css?family=Covered+By+Your+Grace:100,400' rel='stylesheet' type='text/css'>	
+  </head>
+  
+  <body>  
+	<nav>
+		<ul>
+			<li class="home"><a href="index.html">Priscilla Lee</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="resume.html">Resume</a></li>
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="contact.html">Contact Me</a></li>
+		</ul>
+	</nav>   
+	<div class="container">
+		<div class="java"> <pre>
+ 1  <span class="blue">public class</span> <span class="navy">Priscilla</span> { 
+ 2     <span class="green">//private instance vars</span>
+ 3     <span class="navy">String</span> name, school, major;
+ 4     <span class="navy">int </span> gradYear;
+ 5     <span class="navy">String</span>[] likes;
+ 6  
+ 7     <span class="green">//constructor</span>
+ 8     <span class="blue">public </span><span class="navy">Priscilla</span>() {
+ 9        name = <span class="red">"Priscilla Lee"</span>;
+10        school = <span class="red">"Wellesley College"</span>;
+11        major = <span class="red">"computer science"</span>;
+12        gradYear = <span class="turq">2018</span>;    
+13        likes = <span class="blue">new </span><span class="navy">String</span>[]{<span class="red">"programming", "eating", "sleeping"</span>};
+14    }
+15  
+16     <span class="green">//returns a String representation of a Priscilla object</span>
+17     <span class="blue">public </span><span class="navy">String</span> toString(){
+18        <span class="navy">String</span> s = <span class="red">"Hi, my name is "</span> + name + <span class="red">", and I'm a sophomore "</span>;
+19        s += <span class="red">"studying "</span> + major + <span class="red">" at "</span> + school;
+20        s += <span class="red">". In my free time, I like "</span>; 
+21        <span class="blue">for </span> (<span class="navy">int</span> i = <span class="turq">0</span>; i < likes.length; i++) {
+22           <span class="blue">if </span>(i==likes.length-1) s += <span class="red">"and "</span> + likes[i] + <span class="red">". "</span>;
+23           <span class="blue">else </span> s += likes[i] + <span class="red">", "</span>;
+24        } <span class="blue">return </span>s;
+25     }
+26  }</pre></div>
+		<div class="interactions"> <br>
+		<h1 id="header"> About Me </h1>
+  <pre>  &gt; <span class="navy">Priscilla</span> pris = <span class="blue">new</span> <span class="navy">Priscilla()</span>;
+  &gt; <span class="navy">System</span>.out.println(pris);
+  <span class="green">Hi, my name is Priscilla Lee, and I'm a sophomore 
+  studying computer science at Wellesley College. In my 
+  free time, I like programming, eating, and sleeping.</span>
+  &gt;</pre>
+		</div>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+body {background-color: #fafafa;}
+h1 {font-size: 120%;}
+
+.java, .interactions {
+	margin-left: 50px;
+	width: 670px;
+	height: 530px;
+	border: 3px solid #16a6b6;
+	border-radius: 15px;
+	padding: 0px 20px;
+}
+
+.container {
+	position: relative;
+	margin-top: 80px;
+	width: 670px;
+}
+
+.java {
+	position: absolute;
+	/*visibility: hidden;*/
+	opacity: 0;
+	top: 0px;
+	font-size: 125%;
+	background-color: #fdffff;
+}
+
+.container:hover > .java {
+	/*visibility: visible;*/
+	opacity: 1;
+}
+
+.java, .container:hover > .java {
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.interactions {
+	font-size: 150%;
+	line-height: 125%;
+	background-color: #f0f5f5;
+}
+
+h1#header {
+	font-size: 325%;
+	color: #16a6b6; /*333;*/
+	font-weight: normal;
+	font-family: "Covered By Your Grace", "Marck Script", "PT Mono", "courier new", sans-serif;
+	text-align: center;
+	height: 60px;
+	border-bottom: 3px solid #16a6b6;
+	margin-bottom: 35px;
+}
+
+.blue {color: blue;}
+.green{color: green;}
+.red{color: #DB1D09;}
+.turq{color: turquoise;}
+.navy{color: #4A0E8E;}

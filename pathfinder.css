@@ -1,0 +1,70 @@
+.container {
+	margin-top: 5%;
+	margin-bottom: 2%;
+	font-family: "Droid Sans", sans-serif;
+}
+
+body {background-color: #fafafa !important;}
+
+#top {
+	color: #16a6b6;
+	font-family: "Covered By Your Grace", "Marck Script", "Droid Sans", sans-serif !important;
+	font-size: 500%;
+	font-style: bold;
+	text-align: center;
+}
+
+h3 {
+	color: #16a6b6 !important;
+	margin-top: 0px !important;
+}
+
+.caption {
+	color: #16a6b6 !important;
+}
+
+.label-danger {
+	background-color: rgba(238,101,87,0.9) !important;
+	border-color: rgba(238,101,87,1) !important;
+}
+
+.border-top {
+	border-top: 3px solid #16a6b6;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.btn-danger {
+	background-color: #ee6557 !important;
+	border-color: #ee6557 !important;
+}
+
+.crop-container {
+    width: 100%;
+    overflow: hidden;
+	border: 2px solid rgba(238,101,87,0.7);
+	border-radius: 5px;
+}
+.crop-container img {
+    margin-left: -20%;
+	width: 140%;
+}
+
+.panel-primary {
+	border-color: rgba(22,166,182,0.6) !important;
+	background-color: rgba(255,255,255,0.1) !important;
+}
+
+.panel-primary > .panel-heading {
+	background-color: rgba(22,166,182,0.6) !important;
+	border-color: rgba(22,166,182,0.6) !important;
+}
+
+.panel-primary>.panel-heading+.panel-collapse>.panel-body {
+  border-top-color: rgba(22,166,182,0.6) !important;
+}
+
+.panel-body {
+	font-family: "PT Mono", "courier new", sans-serif !important;
+	font-size: 80%;
+}

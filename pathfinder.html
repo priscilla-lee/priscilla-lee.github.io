@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Path Finder | Priscilla Lee</title>
+	<meta charset="utf-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.3.2/flatly/bootstrap.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:100,400' rel='stylesheet' type='text/css'>	
+	<link href='http://fonts.googleapis.com/css?family=PT+Mono:100,400' rel='stylesheet' type='text/css'>		
+	<link href='http://fonts.googleapis.com/css?family=Marck+Script:100,400' rel='stylesheet' type='text/css'>	
+	<link href='http://fonts.googleapis.com/css?family=Covered+By+Your+Grace:100,400' rel='stylesheet' type='text/css'>
+	<link href="pathfinder.css" rel="stylesheet">
+	<link href="nav.css" rel="stylesheet">
+</head>
+
+<body>    
+	<nav>
+		<ul>
+			<li class="home"><a href="index.html">Priscilla Lee</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="resume.html">Resume</a></li>
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="contact.html">Contact Me</a></li>
+		</ul>
+	</nav> 
+	<div class="container">
+		<div class="row">
+			<h1 id="top">Path Finder</h1>
+		</div>
+		
+		<!--Overview-->
+		<div class="row border-top">
+            <div class="col-md-5">
+				<div id="carousel-pathfinder" class="carousel slide" data-ride="carousel" data-interval="2000">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-pathfinder" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-pathfinder" data-slide-to="1"></li>
+						<li data-target="#carousel-pathfinder" data-slide-to="2"></li>
+						<li data-target="#carousel-pathfinder" data-slide-to="3"></li>
+						<li data-target="#carousel-pathfinder" data-slide-to="4"></li>
+						<li data-target="#carousel-pathfinder" data-slide-to="5"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active"><img src="images/pathfinder1.GIF"></div>
+						<div class="item"><img src="images/pathfinder2.GIF"></div>
+						<div class="item"><img src="images/pathfinder3.GIF"></div>
+						<div class="item"><img src="images/pathfinder4.GIF"></div>
+						<div class="item"><img src="images/pathfinder5.GIF"></div>
+						<div class="item"><img src="images/pathfinder6.GIF"></div>
+					</div>
+
+					<!-- Controls -->
+					<a class="left carousel-control" href="#carousel-pathfinder" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#carousel-pathfinder" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+            </div>
+            <div class="col-md-7">
+                <h3>Overview of Path Finder</h3>
+                <h4>Created for CS 230 Data Structures class (Fall 2014)</h4>
+                <p>
+					A grid-maze game: player must maneuver piece to target destination in fewest number of steps possible 
+					(if multiple targets, the player must strategize in which order to visit each target to minimize steps traveled)
+				<ul>
+					<li>Written in Java (17 classes total)</li>
+					<li>Graph algorithms (breadth-first search), stacks, recursion, scanning in and 
+					printing out to text files, graphical user interface</li>
+					<li>Features: undo & reset (with keyboard shortcuts), completely 
+					randomized levels, customizable levels, computer hints</li>
+				</ul>
+				</p>
+				<a class="btn btn-danger" href="images/cs230-final-project.zip">Download Java Files</a>
+            </div>
+        </div>
+		
+		<div class="row border-top">
+			<!--Classes & methods outline-->
+			<div class="col-md-5">
+				<h3>Important classes & methods</h3>
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					<div class="panel panel-primary">
+						<div class="panel-heading" role="tab" id="headingTwo">
+							<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#GridCoordinate" aria-expanded="true" aria-controls="GridCoordinate">
+								GridCoordinate
+							</a>
+							</h4>
+						</div>
+						<div id="GridCoordinate" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+							<div class="panel-body">
+								public GridCoordinate(int x, int y)<br>
+								public int getX()<br>
+								public int getY()<br>
+								public boolean getE()<br>
+								public boolean getN()<br>
+								public boolean getS()<br>
+								public boolean getW()<br>
+								public void setE(boolean value)<br>
+								public void setN(boolean value)<br>
+								public void setS(boolean value)<br>
+								public void setW(boolean value)<br>
+								public boolean hasPrevious()<br>
+								public GridCoordinate getPrevious()<br>
+								public void setPrevious(GridCoordinate n)<br>
+								public boolean equals(GridCoordinate other)<br>
+								public int getBackwardsCoordinate()<br>
+								public int getCoordinate()<br>
+								public String toString()
+							</div>
+						</div>
+					</div>	
+					<div class="panel panel-primary">
+						<div class="panel-heading" role="tab" id="headingTwo">
+							<h4 class="panel-title">
+							<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#GridGraph" aria-expanded="false" aria-controls="GridGraph">
+								GridGraph
+							</a>
+							</h4>
+						</div>
+						<div id="GridGraph" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							<div class="panel-body">											
+								public GridGraph(int levelNum) <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throws FileNotFoundException <br>
+								public GridGraph(int w, int h) <br>
+								private void constructRandomGridGraph(int w, int h) <br>
+								private GridCoordinate randomGridCoordinate(int <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width,int height) <br>
+								private boolean isTaken(GridCoordinate gc) <br>
+								public int getLevel() <br>
+								public int getWidth() <br>
+								public int getHeight() <br>
+								public GridCoordinate getBegin() <br>
+								public ArrayList<GridCoordinate> getTargets() <br>
+								public ArrayList<GridCoordinate> getBlocks() <br>
+								public int getShortestPath() <br>
+								private int shortestPath(GridCoordinate start, <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ArrayList<GridCoordinate> targets)<br>
+								private int pathLength(LinkedList<GridCoordinate> bfs) <br>
+								private LinkedList<GridCoordinate> bfs(GridCoordinate start, <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GridCoordinate target) <br>
+								private GridCoordinate findGridCoordinate(int x, <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int y) <br>
+								private void removeVertex(int x, int y) <br>
+								private GridCoordinate getVertex(int x, int y) <br>
+								private boolean isVisited(GridCoordinate v) <br>
+								private void setVisited(GridCoordinate v) <br>
+								public String toString() <br>
+							</div>
+						</div>
+					</div>	
+					<div class="panel panel-primary">
+						<div class="panel-heading" role="tab" id="headingTwo">
+							<h4 class="panel-title">
+							<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#GridPanel" aria-expanded="false" aria-controls="GridPanel">
+								GridPanel
+							</a>
+							</h4>
+						</div>
+						<div id="GridPanel" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							<div class="panel-body">
+								public GridPanel(LevelPanel lp, GridGraph gg)<br>
+								public int getStepCount()<br>
+								public void reset() <br>
+								public void undo() <br>
+								private void undoMove(int direction) <br>
+								public void move(int direction) <br>
+								private boolean isTarget(int x, int y) <br>
+								private boolean isValidMove(int direction) <br>
+								private boolean isValidPosition(int x, int y) <br>
+								public boolean levelComplete() <br>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-primary">
+						<div class="panel-heading" role="tab" id="headingTwo">
+							<h4 class="panel-title">
+							<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#LevelPanel" aria-expanded="false" aria-controls="LevelPanel">
+								LevelPanel
+							</a>
+							</h4>
+						</div>
+						<div id="LevelPanel" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							<div class="panel-body">
+								public LevelPanel(GamePanel gp, GridGraph gg)<br>
+								public void loadNextLevel()<br>
+								public void loadRandomLevel(int w, int h)<br>
+								public void updateNextLabel()<br>
+								public void updateStepsLabel()
+							</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+			<!--1 target algorithm-->
+			<div class="col-md-7">
+				<h3>Calculating the shortest path for a SINGLE target</h3>
+				<p>
+					To determine the length of the shortest path from a start position to a single target, we used a 
+					breadth-first search, and then traced back through the traversal to reconstruct the cheapest path. 
+					<span class="label label-danger">Click on the gif below to play/restart</span>
+				</p>
+
+				<div class="crop-container">
+				<!-- <img width="100%" src="images/shortest-path-algo.gif">		 -->		
+				<img width="100%" src="images/shortest-path-algo-static.png" onclick='javascript:(this.src="files/shortest-path-algo.gif")'/>
+				</div>
+			</div>
+		</div>
+		
+		<!--multiple targets algorithm-->
+		<div class="row border-top">
+			<h3>Calculating the shortest path for MULTIPLE targets</h3>
+			<p>
+			This algorithm was pretty tricky. At first, we thought that we could determine 
+			the shortest path through the grid by advancing to the CLOSEST target to our CURRENT position.
+			We ran this algorithm on the whiteboard and it seemed to work great (yayyy)! We wrote up the code,
+			ran our game, and after a few successful tests, we came across a scenario that "broke" our algorithm.
+			It seemed that our algorithm was easily "baited", or distracted, by targets that led us down a costly path.
+			We decided to use RECURSION (dun dun dunnn) to account for every single possible option/path. I'm sure
+			this isn't the most efficient solution, but having not yet taken an algorithms course, it was exciting 
+			to accidentally venture into the world of algorithms during this project.
+			</p>
+			<div class="col-md-4">
+			<div class="well images">
+				<p class="caption">Initial (fake) success! Our greedy algorithm passed the first few tests.</p>
+				<img width="100%" src="images/algo-success.GIF">
+			</div></div>
+			<div class="col-md-4">
+			<div class="well images">
+				<p class="caption">Oh no! Our algorithm is broken! It was "baited", or led down, the more costly path.</p>
+				<img width="100%" src="images/algo-baited.GIF">				
+			</div></div>
+			<div class="col-md-4">
+			<div class="well images">
+				<p class="caption">Recursion to the rescue! Though probably unnecessarily inefficient...</p>
+				<img width="100%" src="images/algo-recursion.GIF">				
+			</div></div>
+		</div>
+	</div>
+</body>
+</html>
